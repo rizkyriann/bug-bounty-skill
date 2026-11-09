@@ -1,0 +1,58 @@
+BUG BOUNTY SECURITY TEST — AUTHORIZED PROGRAM
+
+You are assisting me with an authorized bug bounty assessment. Follow the program's written policy and the scope below. Do not infer authorization for any asset that is not explicitly listed.
+
+PROGRAM
+- Platform: HackerOne
+- Program name / URL: [PROGRAM NAME OR URL]
+- Authorization reference: [PROGRAM ID / INVITATION / OTHER REFERENCE]
+- Assessment date or permitted testing window: [DATE / WINDOW]
+
+SCOPE
+- In-scope domains, hosts, apps, and paths (copy exactly from the program policy):
+  [PASTE IN-SCOPE ASSETS]
+- Out-of-scope assets and paths:
+  [PASTE OUT-OF-SCOPE ITEMS]
+- Environment permitted by the program: [STAGING / PRODUCTION / OTHER]
+- Explicitly prohibited actions or test classes:
+  [PASTE PROGRAM RESTRICTIONS]
+- Rate limits / request pacing requirements:
+  [PASTE LIMITS]
+- Data handling and disclosure restrictions:
+  [PASTE REQUIREMENTS]
+
+TEST CONTEXT
+- Target URL(s) for this session: [EXACT IN-SCOPE URLS]
+- Application type: [WEB APP / REST API / GRAPHQL / OTHER]
+- API schema or documentation, if available: [PATH OR URL]
+- Test accounts available: [NONE / DESCRIBE TEST ACCOUNTS AND ROLES]
+- Credentials: retrieve them only from the approved local secret store or environment. Do not print, include, or commit real passwords, session cookies, or tokens.
+- Known technologies or features: [OPTIONAL]
+- Output directory: [PATH]
+
+SKILLS TO FOLLOW
+1. Read README.md, TOOLS.md, and USAGE.md in this bug-bounty-skill bundle.
+2. Start with core/bb-methodology/SKILL.md and core/recon-scope-triage/SKILL.md.
+3. For a website, use core/web-app-penetration-testing/SKILL.md. For an API, use core/api-security-testing/SKILL.md. Use the relevant playbooks from playbooks/ based on observed technologies and features; do not load every playbook at once.
+4. Before preparing a submission, follow core/triage-validation/SKILL.md, core/evidence-hygiene/SKILL.md, and core/report-writing/SKILL.md. Use optional/bugcrowd-reporting only for Bugcrowd submissions, not HackerOne.
+
+WORK PLAN AND GUARDRAILS
+- First compare the requested targets and actions against the written scope. Verify ownership of any newly discovered assets with recon-scope-triage before testing them.
+- If scope, authorization, rate limits, or an important restriction is missing or ambiguous, ask me before active testing. Do not guess.
+- Begin with reconnaissance and keep a concise recon-notes.md. Continue to active testing only within the explicit program rules.
+- Check whether each required tool is installed. Follow TOOLS.md for fallbacks. Ask me before installing packages or binaries; do not use elevated privileges unless I explicitly approve them.
+- No denial-of-service, flooding, brute-force, destructive changes, real-user account access, unnecessary collection of personal data, or actions that cause charges, emails, or other external side effects.
+- Use test accounts and controlled data wherever possible. Stop at the minimum non-destructive proof of impact. Do not dump datasets, retrieve cloud credentials, persist, evade detection, or test lateral movement.
+- Treat automated scanner output as leads only. Verify each candidate manually with a minimal, replayable request before calling it a finding.
+- Keep credentials and raw sensitive evidence out of reports, screenshots, shared logs, and committed files. Redact tokens, cookies, and unnecessary personal data.
+- Do not submit anything to HackerOne or contact the program on my behalf. Prepare findings for my review and submission.
+
+DELIVERABLES
+Write these files under the output directory above:
+- pentest-report.md — concise summary, scope, methods, verified findings, severity rationale, exact replayable PoCs, impact, remediation, and honest coverage limitations.
+- recon-notes.md — assets and endpoints found, with ownership/scope status and tools used.
+- poc-requests.txt — minimal reproduction requests with all credentials and sensitive values replaced by placeholders such as <REDACTED_TOKEN>.
+
+For every candidate finding, record the exact request and a minimal response excerpt, confirm the impact (not just an unusual status code), and run the request again before reporting it. Separate confirmed findings from unconfirmed leads. State what was not tested and why. Use the severity/CVSS version required by the program policy.
+
+Start by confirming that the scope and constraints above are sufficient. If they are, summarize the allowed targets and proposed first phase, then begin reconnaissance.

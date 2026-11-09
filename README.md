@@ -11,6 +11,7 @@ This directory is self-contained. Curated skill copies and required supporting f
 - **`optional/`** — 43 skills for specialized targets, platform-specific workflows, and alternative orchestrators. Use only when the written program scope justifies them. `bug-bounty` and `bb-local-toolkit` are alternative full workflows; do not run them as simultaneous orchestrators with `bb-methodology`.
 - **`TOOLS.md`** — tool discovery, installation and curl/Python fallbacks.
 - **`USAGE.md`** — installation guidance and prompt templates.
+- **`PROMPT-TEMPLATE.txt`** — ready-to-fill English prompt for an authorized HackerOne assessment.
 
 ## Report convention
 

@@ -51,6 +51,11 @@ Python3 + `curl` are assumed present everywhere (Windows 10+ ships curl). `jq` f
 - Go-release binaries are self-contained — download from GitHub releases into a `bin/` dir on PATH.
 - For the full Kali toolset, prefer **WSL (Kali/Ubuntu)** in this homelab; everything above installs by `apt`.
 
+## Specialized tools
+
+- **RESTler** (`optional/performing-api-fuzzing-with-restler`): requires Microsoft RESTler, Python 3.12+, and .NET 8. Follow Microsoft's current official build/release instructions only after user approval. Its fuzzing may create/delete resources; use only the isolated staging profile and explicit request limits described by that skill. There is no curl-equivalent for stateful fuzzing.
+- **Broken-link triage** (`playbooks/exploiting-broken-link-hijacking`): `curl`, `dig`, and `whois` are useful but optional; use `curl --head` and resolver tools already available. Treat unavailability as a lead only. Do not install/register/claim the referenced resource as a tool test.
+
 ## Discipline
 
 - Log in the report's Appendix which tools ran, which were missing, and which fallbacks replaced them — a fallback-covered test is *weaker evidence*, and the coverage notes must say so.

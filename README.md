@@ -7,8 +7,8 @@ This directory is self-contained. Curated skill copies and required supporting f
 ## Structure
 
 - **`core/`** — 10 skills: `penetration-testing`, `web-app-penetration-testing`, `api-security-testing`, `owasp-top-10-testing`, `find-security-vulnerabilities-in-code`, `bb-methodology`, `recon-scope-triage`, `triage-validation`, `evidence-hygiene`, and `report-writing`. Start with `bb-methodology` for the bug-bounty workflow, use `recon-scope-triage` before testing discovered assets, and use `triage-validation` + `evidence-hygiene` + `report-writing` before submission. Load `web-app-penetration-testing` or `api-security-testing` for the target type.
-- **`playbooks/`** — 128 focused playbooks: 86 original recon/vulnerability/tool/payload skills plus 42 additional web/API recon and `hunt-*` playbooks. Load only the playbooks relevant to observed technology and in-scope features.
-- **`optional/`** — 43 skills for specialized targets, platform-specific workflows, and alternative orchestrators. Use only when the written program scope justifies them. `bug-bounty` and `bb-local-toolkit` are alternative full workflows; do not run them as simultaneous orchestrators with `bb-methodology`.
+- **`playbooks/`** — 129 focused playbooks: 86 original recon/vulnerability/tool/payload skills, 42 common web/API hunting playbooks, and `exploiting-broken-link-hijacking`. Load only playbooks relevant to observed technology and in-scope features.
+- **`optional/`** — 44 skills for specialized targets, platform-specific workflows, and alternative orchestrators, including `performing-api-fuzzing-with-restler`. Use only when the written program scope justifies them. `bug-bounty` and `bb-local-toolkit` are alternative full workflows; do not run them as simultaneous orchestrators with `bb-methodology`.
 - **`TOOLS.md`** — tool discovery, installation and curl/Python fallbacks.
 - **`USAGE.md`** — installation guidance and prompt templates.
 - **`PROMPT-TEMPLATE.txt`** — ready-to-fill English prompt for an authorized HackerOne assessment.
@@ -32,5 +32,6 @@ Deliver one Markdown report per engagement (`pentest-report.md` or the program's
 - **Core additions (5):** `bb-methodology`, `recon-scope-triage`, `triage-validation`, `evidence-hygiene`, `report-writing`.
 - **Playbook additions (42):** `web2-recon`, `osint-methodology`, and 40 `hunt-*` skills for common web/API classes.
 - **Optional additions (31):** `bb-local-toolkit`, `bug-bounty`, `bugcrowd-reporting`, `security-arsenal`, `supply-chain-attack-recon`, `offensive-osint`, 16 specialized `hunt-*` skills, and 9 target-specific cloud/mobile/identity/Web3 skills.
+- **Anthropic additions (2):** `exploiting-broken-link-hijacking` (passive-first; claiming resources is not part of the default workflow) and optional `performing-api-fuzzing-with-restler` (isolated staging only, with enforced request limits). Their Apache-2.0 license files are retained; upstream helper scripts and reference files were not copied.
 
 The original 86 playbooks and 12 optional skills remain part of the set. `hunt-dispatch` was not imported because it depends on a `/hunt` command provided by another host. `bug-bounty` and `bb-local-toolkit` are retained as optional alternatives, not additional default routers.

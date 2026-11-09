@@ -96,5 +96,6 @@ Timeline expectation: recon+test on a normal web target runs within a single ses
 - One engagement per workspace/folder; keep `poc-requests.txt` and note files out of screenshots when publishing.
 - If the agent proposes something outside the stated scope (e.g. brute-forcing the login of an out-of-scope host), refuse and re-anchor the scope in a new prompt.
 - Missing tools: agent resolves via `TOOLS.md` chain (check → curl/python fallback → install with your OK → disclose weaker evidence). Approve installs consciously.
+- RESTler (`optional/performing-api-fuzzing-with-restler`) is not a default scan: only consider it for a program-authorized isolated staging tenant with a request ceiling you can enforce.
 - Custom skills edits: after you modify a SKILL.md, re-point the agent at the folder (agents cache skill inventories per session).
 - Platform-specific extras: the oMoMo `/mode` slash-commands only exist with the oMoMo plugin host; in other agents state the mode in text (e.g. "bug bounty mode").

@@ -46,6 +46,7 @@ A granular playbook library lives at `../playbooks/` in this project. Use these 
 |---|---|---|
 | Recon / enum phases | `recon-*`, `pentest-recon`, `pentest-enum` | `recon-subdomain`, `recon-shodan`, `recon-secrets` |
 | Attack-class depth | `vuln-*` | `vuln-idor`, `vuln-sqli`, `vuln-ssrf`, `vuln-jwt`, `vuln-http-smuggling` |
+| External dependency / broken-link triage | `exploiting-broken-link-hijacking` | External scripts, packages, and dangling references; passive-first, no resource claiming by default |
 | Tool-specific usage | `tool-*` | `tool-nmap`, `tool-sqlmap`, `tool-caido`, `tool-dalfox` |
 | Tech stack specifics | `tech-*`, `hunt-*` | `tech-stack-fingerprint`, `hunt-nextjs`, `hunt-nodejs` (optional) |
 | Payload catalog | `payload-*` | `payload-ssti`, `payload-command-injection` |

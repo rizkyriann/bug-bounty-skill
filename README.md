@@ -7,7 +7,7 @@ This directory is self-contained. Curated skill copies and required supporting f
 ## Structure
 
 - **`core/`** — 10 skills: `penetration-testing`, `web-app-penetration-testing`, `api-security-testing`, `owasp-top-10-testing`, `find-security-vulnerabilities-in-code`, `bb-methodology`, `recon-scope-triage`, `triage-validation`, `evidence-hygiene`, and `report-writing`. Start with `bb-methodology` for the bug-bounty workflow, use `recon-scope-triage` before testing discovered assets, and use `triage-validation` + `evidence-hygiene` + `report-writing` before submission. Load `web-app-penetration-testing` or `api-security-testing` for the target type.
-- **`playbooks/`** — 129 focused playbooks: 86 original recon/vulnerability/tool/payload skills, 42 common web/API hunting playbooks, and `exploiting-broken-link-hijacking`. Load only playbooks relevant to observed technology and in-scope features.
+- **`playbooks/`** — Focused recon, vulnerability, tool, payload, and web/API hunting playbooks. Load only playbooks relevant to observed technology and in-scope features. `deep-coverage` is a specialized final-stage option: offer it after the standard bug-bounty pass if results or coverage remain unsatisfactory, and run it only after the user's explicit acceptance.
 - **`optional/`** — 44 skills for specialized targets, platform-specific workflows, and alternative orchestrators, including `performing-api-fuzzing-with-restler`. Use only when the written program scope justifies them. `bug-bounty` and `bb-local-toolkit` are alternative full workflows; do not run them as simultaneous orchestrators with `bb-methodology`.
 - **`TOOLS.md`** — tool discovery, installation and curl/Python fallbacks.
 - **`USAGE.md`** — installation guidance and prompt templates.

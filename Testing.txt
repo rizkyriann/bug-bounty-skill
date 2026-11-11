@@ -2,46 +2,39 @@ BUG BOUNTY SECURITY TEST — AUTHORIZED PROGRAM
 
 You are assisting me with an authorized bug bounty assessment. Follow the program's written policy and the scope below. Do not infer authorization for any asset that is not explicitly listed.
 
-PROGRAM
-- Platform: HackerOne
-- Program name / URL: tickets.crypto.com
-- Authorization reference: [PROGRAM ID / INVITATION / OTHER REFERENCE]
-- Assessment date or permitted testing window: [DATE / WINDOW]
+Ruang Lingkup Pengujian
+Sistem Elektronik (SE) Pemkab Kutai kartanegara : *.kukarkab.go.id
 
-SCOPE
-Scope Message
-We will accept reports on any asset that is within Crypto.com's control. For assets outside of our control, like vendors (e.g. https://help.crypto.com), we will accept reports if the vulnerability was caused due to a misconfiguration by us.
-Out of Scope: User and Personnel Targeting
-We strictly prohibit any attacks targeting our users, employees, or staff. This is out of scope and includes, but is not limited to:
-Deceptive Software: Publishing or distributing malicious or baiting software, including IDE extensions (e.g., VSCode), browser extensions, AI skills, or public code packages.
-Social Engineering: Attempting to trick or socially engineer staff or users into installing third-party tools or clicking links.
-Unauthorized Data Collection: Extracting any data, beacons, or telemetry from our users' or staff members' machines, regardless of whether the data is deemed "harmless" or benign.
-Malware: Any attacks involving viruses, trojans, or destructive payloads.
-Commitments
-By engaging in any activity under this HackerOne program:
-We commit to working with you to making Crypto.com, our customers, and our products more secure
-We commit to responding to all reports as soon as possible and in good-faith
-We commit to honesty and transparency with you
-We commit to evaluating all reports for bounty eligibility fairly and neutrally
-We commit to making ourselves available upon request when reasonable to assist you
-You commit to not engaging in any activities under this or any other Crypto.com-affiliated HackerOne programs as or with the assistance of a current or former employee, contractor, or vendor
-You commit to not attempting to sabotage or disrupt any of our operations
-You commit to following HackerOne's Code of Conduct
-You commit to reporting potential security issues only through our Bug Bounty program
-Smart Contracts
-For vulnerabilities against in-scope smart contracts, please note that we score internally only based on potential impact to user funds and cryptographic security rather than CVSS 3.1. As always, all reports must come with a valid Proof-of-Concept. This means that reports operating on theoretical attacks such as governance attacks, incorrect data supplied by third-party oracles, sybil attacks, or lacks of liquidity are not considered valid reports.
-We only consider the latest mainnet releases of blockchain assets as in-scope. We will not consider reports against assets marked "Mock" or "Test". Please note that any report which included draining another individual's funds or blocking them access to their funds without their consent will automatically make you ineligible for this program.
-Extended Policy
-This document is intended to be concise and precise. An extended version of our HackerOne policy, including sections such as Out-of-scope Vulnerabilities and Vulnerability Severity Definitions, can be found here.
+Jenis Kerentanan yang Dapat Dilaporkan
+Cross-Site Scripting (XSS) 
+Cross-Site Request Forgery (CSRF) 
+SQL Injection 
+Server-Side Request Forgery (SSRF) 
+Server-Side Remote Code Execution (RCE) 
+XML External Entity (XXE) 
+Access Control Issues (IDOR, Privilege Escalation, dan sejenisnya) 
+Authentication Bypass 
+Exposed Administrative Panels that don't require login credentials 
+Directory Traversal Issues Local File Disclosure (LFD) 
+Misconfiguration issues on servers and applications 
+Significant Authentication Bypass 
+Information disclosure of Sensitive Information 
+Server Side Template Injection (SSTI) 
+Leaked Private Keys Local/Remote File Inclusion (LFI/RFI)
+Kerentanan yang Tidak Termasuk Ruang Lingkup
+Denial-of-Service (DoS/DDoS).
+Cross-site Scripting (Self-XSS) 
+Vulnerability that is only theoretical without proof 
+Missing Security Header 
+Open port without valid impact 
+Social Engineering 
+CSRF on non-sensitive features 
+Clickjacking on non-sensitive pages 
+Email spoofing and/or related to email misconfiguration 
+SSL/TLS best practices 
+Penggunaan Leak Credential di luar Credential yang disediakan 
+Menggunakan Automation Tools
 
-TEST CONTEXT
-- Target URL(s) for this session: [EXACT IN-SCOPE URLS]
-- Application type: [WEB APP]
-- API schema or documentation, if available: [PATH OR URL]
-- Test accounts available: [NONE / DESCRIBE TEST ACCOUNTS AND ROLES]
-- Credentials: retrieve them only from the approved local secret store or environment. Do not print, include, or commit real passwords, session cookies, or tokens.
-- Known technologies or features: [OPTIONAL]
-- Output directory: [PATH]
 
 SKILLS TO FOLLOW
 1. Read README.md, TOOLS.md, and USAGE.md in this bug-bounty-skill bundle.

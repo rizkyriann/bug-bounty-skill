@@ -369,6 +369,16 @@ Before pushing back with "I think we're done because X," do this:
 
 **Lesson from an authorized engagement:** After a first-pass of 5 weak findings the user said "I have 10+, find them." Loading `hunt-auth-bypass` (which had been loaded but not walked through end-to-end) immediately surfaced the `/_vti_bin/Authentication.asmx` legacy SOAP login — the highest-impact bug in the engagement. The user was right; pushback would have been wrong.
 
+### Optional Deep Coverage Escalation
+
+Deep Coverage is a **last-stage, opt-in follow-up**, not part of initial recon or the standard first pass.
+
+- Offer `playbooks/deep-coverage/SKILL.md` only after the standard in-scope workflow has reached its normal stopping/reporting point and the user says results or coverage are not satisfactory, or documented material gaps remain.
+- Explain briefly what the deeper pass would examine, then ask the user whether they want to proceed. Do not load or run it until the user explicitly accepts.
+- On acceptance, follow the skill's gap-map workflow and focus on untested hypotheses using the existing scope, RoE, limits, and test accounts. The escalation never authorizes broader scope or more intrusive methods.
+- For potentially dangerous findings such as RCE, follow the skill's high-impact stop gate: perform only the minimum harmless validation allowed by the RoE, then stop. No interactive shell, host exploration, data extraction, persistence, or lateral movement.
+- If the user declines, report the current results and coverage limitations without pressure.
+
 ### Tool Routing by Phase
 
 | Phase | Tools | Why this order |
@@ -513,3 +523,4 @@ The discipline rules in this file — OOB Gate, Marker Discipline, Body-Diff Rul
 
 Verified across Phase 2D's hardened-lab campaign: 8/8 discipline rules fired correctly against fake-bug-shaped behavior (URL echo dressed as XSS, word collision dressed as reflection, status-code-only "bypasses" with byte-identical bodies, 200-OK leak-claims with no actual leak data). Validation rates fall sharply when these rules get skipped. The friction is the feature — if a rule feels obstructive, that's it doing its job. The findings it kills are the half that would have come back N/A anyway.
 - **`evidence-hygiene`** — When Phase 5 is collecting PoC screenshots / HARs. Workflow primitive: before any cookie / PII appears in a screenshot, hand off to `evidence-hygiene` for the redaction protocol.
+- **`deep-coverage`** — Optional final escalation after the standard bug-bounty pass, offered only when results/coverage remain unsatisfactory and run only with the user's explicit acceptance.
